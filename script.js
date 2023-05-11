@@ -21,8 +21,8 @@
                 document.getElementById("total").value = tot + "/600"
                 document.getElementById("name1").value = name
                 document.getElementById("rollNum1").value = rollNum
-                document.getElementById('percentage').value = Math.round(tot / 600 * 100) + "%";
-                if (document.getElementById('percentage').value > '90') {
+                document.getElementById('percentage').value = Math.floor(tot / 600 * 100) + "%";
+                if (document.getElementById('percentage').value > '90' || document.getElementById('percentage').value > '100' ) {
                     document.getElementById('grade').innerHTML = "A+"
                 }
                 else if (document.getElementById('percentage').value > '80') {
