@@ -16,7 +16,7 @@
     <div class="container" id="container">
         <div class="heading">
             <h1>Student's Details</h1>
-            <button onclick="showRes()">View Score</button>
+            <button onclick="showRes()">SUBMIT</button>
         </div>
         <div class="form" id="form">
             <div class="row">
@@ -92,6 +92,12 @@
                     <i class="fa fa-check"></i>
                 </div>
             </div>
+            <div class="row">
+                <button onclick="document.getElementById('imageInput').click()">
+                    Upload Image
+                </button>
+                <input type="file" id="imageInput" style="display: none" onchange="showImage(event)" />
+            </div>
         </div>
     </div>
     <div class="result" id="res">
@@ -100,15 +106,14 @@
             <i class="fa fa-xmark" style="font-size: 20px; position: absolute; top: 10px; right: 10px;"
                 onclick="hideRes()"></i>
         </div>
+
+
+
+        <div class="img" id="azaan">
+            <img src="" id="user">
+            <input type="text" id="name1" readonly>
+        </div>
         <div class="form" id="form">
-            <div class="row">
-                <div class="h">
-                    <p>Name:</p>
-                </div>
-                <div class="inp">
-                    <input type="text" id="name1" readonly>
-                </div>
-            </div>
             <div class="row">
                 <div class="h">
                     <p>Roll Number:</p>

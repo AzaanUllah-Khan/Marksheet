@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgba(0, 255, 255, 0.5);
+    background: linear-gradient(to bottom, rgba(181, 255, 255, 0.5), #00e5ff7c);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 10px 0;
 }
 
 .row {
@@ -97,14 +97,32 @@ hr {
 }
 
 .result {
-    background-color: #f9f9f9;
+    background: linear-gradient(to bottom, #ffffff, #fafafa, #f4f4f4);
     border: 2px solid black;
     border-radius: 5px;
     position: absolute;
-    width: 80%;
-    left: -105%;
-    height: 100vh;
+    width: 50%;
+    top: -105%;
+    left: auto;
     z-index: 300;
+}
+
+.result img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
 }
 
 .heading {
@@ -126,7 +144,8 @@ hr {
     border: 1px solid black;
     color: black;
 }
-.grade{
+
+.grade {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -141,14 +160,42 @@ hr {
     animation: spin 5s ease-in-out infinite;
     display: none;
 }
+
+.form button {
+    width: 200px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
+
+.form button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    color: black;
+}
+
+#name1 {
+    background: transparent;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+}
+
 @keyframes spin {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: rotate(180deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -164,9 +211,9 @@ hr {
     .container {
         width: 80%;
     }
-    .result{
-        width: 100%;
-        height: 100vh;
+
+    .result {
+        width: 95%;
         overflow-y: auto;
         border-radius: 0;
     }
@@ -178,7 +225,7 @@ hr {
         height: 100vh;
         border-radius: 0;
     }
-    
+
     .row input {
         width: 90%;
     }
